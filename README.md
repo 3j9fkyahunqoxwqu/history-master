@@ -23,6 +23,10 @@ History Master is written in pure JavaScript before v2.0.0, you can check this v
 
 After v2.0.0, it gets a big rewrite in [ClojureScript](https://github.com/clojure/clojurescript) + [Reagent](https://github.com/reagent-project/reagent) + [Re-frame](https://github.com/Day8/re-frame) + [Ant.design](https://ant.design/)，which locates in [cljs-src](cljs-src).
 
+
+Since it's written in cljs, so [lein](https://leiningen.org/) is required to develop this extension. To get the final release version, run [release.sh](./release.sh) script, it will generate a zip file in your home directory.
+
+
 - [extensions](https://github.com/jiacai2050/better-history/tree/extensions) branch used for Firefox/Chrome extensions, thanks to [WebExtensions](https://developer.mozilla.org/Add-ons/WebExtensions) -- Write once, Run All browsers.
 - [master](https://github.com/jiacai2050/better-history/tree/master) branch used for Node.js
 
