@@ -1,6 +1,5 @@
 (ns history-master.chrome
-  (:require [cljs.core.async :refer [<! >! chan] :refer-macros [go]]
-            [re-frame.core :as rf]
+  (:require [re-frame.core :as rf]
             [reagent.core :as r]
             [history-master.common :refer [search-limit default-range] :as c]))
 
@@ -13,7 +12,6 @@
                                        :endTime end
                                        :maxResults search-limit})
                              (fn [items]
-                               ;; (.log js/console items)
                                (rf/dispatch [:query-result items])))))
 
 (rf/reg-event-fx
@@ -157,7 +155,7 @@
                               [start end])
                      :single (let [{:keys [item]} opts
                                    {:keys [visit-time]} item
-                                   delta 0.1]
+                                   delta 1]
                                ;; Chrome extension doesn't support deleteById, so we deleteByRange
                                [(- visit-time delta) (+ visit-time delta)]))}))
 
