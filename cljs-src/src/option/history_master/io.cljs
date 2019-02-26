@@ -18,7 +18,7 @@
                                                      [headings & histories] (str/split csv-body "\n")]
                                                  (doseq [line histories]
                                                    (let [[visit-time title _ _ _ url] (str/split line ",")]
-                                                     (rf/dispatch [:add-history {:url url :visitTime visit-time
+                                                     (rf/dispatch [:add-history {:url url :visitTime (js/parseInt visit-time)
                                                                                  :title title}])))
                                                  (ant/message-info (str (count histories) " histories imported. Try research!")))))
                                        (.readAsText reader file))))

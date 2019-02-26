@@ -30,7 +30,8 @@
                          [ant/menu-item {:key "stat"} [ant/icon {:type "area-chart"}] "Statistics"]
                          [ant/menu-sub-menu {:title (r/as-element [:span {:class "submenu-title-wrapper"}
                                                                    [ant/icon {:type "sync"}]
-                                                                   "Sync among Firefox/Chrome"])}
+                                                                   [ant/tooltip {:title "among Firefox/Chrome" :placement "right"}
+                                                                    "Sync"]])}
                           [ant/menu-item {:key "export"} [ant/icon {:type "download"}] "Export"]
                           [ant/menu-item {:key "import"} [ant/icon {:type "upload"}] [ant/tooltip {:title "NOTE: Chrome only support add histories at current time."}
                                                                                       "Import"]]]]]
